@@ -1239,8 +1239,17 @@ function setDefaultDates(){
   const ld=$('l-data'); if(ld&&!ld.value) ld.value=hoje;
 }
 function populateSel(){
-  const at=DB.corretores.filter(c=>c.status==='Ativo');
-  ['v-corretor','l-corretor'].forEach(id=>{const s=$(id);if(s)s.innerHTML=at.map(c=>`<option value="${c.nome}">${c.nome}</option>`).join('');});
+  const at = DB.corretores.filter(c => c.status === 'Ativo');
+
+  ['v-corretor','l-corretor'].forEach(id => {
+    const s = $(id);
+    if (!s) return;
+
+    s.innerHTML =
+      '<option value="">Selecione o corretor</option>' +
+      at.map(c => `<option value="${c.nome}">${c.nome}</option>`).join('');
+  });
+
   setDefaultDates();
 }
 
