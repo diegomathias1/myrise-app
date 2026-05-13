@@ -767,33 +767,73 @@ body {
    .pdf-page-header { display:none; }
 
 /* ===== HEADER AJUSTE ===== */
-.app-header {
-  position: relative;
+.app-header{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--black);
 }
 
-.header-inner {
+.header-inner{
+  max-width: 860px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
+  padding: 12px 20px;
+  flex-wrap: wrap;
 }
 
-.header-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
+.logo-img{
+  height: 38px;
+  width: auto;
+  display: block;
 }
-</style>
-</head>
-<body>
+
+.header-title{
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--flame);
+  text-align: center;
+  flex: 1;
+}
+
+@media (max-width: 600px){
+  .header-inner{
+    padding: 10px 8px;
+    gap: 6px;
+  }
+
+  .logo-img{
+    height: 28px;
+  }
+
+  .header-title{
+    width: 100%;
+    order: 2;
+    font-size: 12px;
+  }
+
+  .header-right{
+    width: 100%;
+    order: 3;
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .btn-hdr{
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}
 
 <!-- ══ HEADER ══════════════════════════════ -->
 <header class="app-header">
   <div class="header-inner">
 
-    <img src="logo2.png" alt="MyRise">
+    <img src="logo2.png" alt="MyRise" class="logo-img">
 
     <div class="header-title">FICHA DE CAPTAÇÃO</div>
 
