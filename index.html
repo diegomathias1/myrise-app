@@ -49,7 +49,26 @@ body.dark .theme-btn{border-color:#3a3a3c;color:#fff;}
 .badge-admin{background:var(--or-bg);color:var(--or);border:1px solid var(--or-brd);}
 .badge-cor{background:var(--gr-bg);color:var(--gr);border:1px solid rgba(22,163,74,.3);}
 .avatar-btn{width:32px;height:32px;border-radius:50%;background:var(--or);color:#fff;font-size:12px;font-weight:700;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.avatar-btn{width:32px;height:32px;border-radius:50%;background:var(--or);color:#fff;font-size:12px;font-weight:700;border:none;cursor:pointer;display:flex;align-items:center;}
 
+.logo-light {
+  display: block;
+}
+
+.logo-dark {
+  display: none;
+}
+
+body.dark .logo-light {
+  display: none;
+}
+
+body.dark .logo-dark {
+  display: block;
+}
+
+/* TABBAR */
+.tabbar{position:fixed;bottom:0;left:0;right:0;...}
 /* TABBAR */
 .tabbar{position:fixed;bottom:0;left:0;right:0;border-top:1px solid;display:flex;z-index:100;padding-bottom:env(safe-area-inset-bottom,0);}
 body.light .tabbar{background:#fff;border-color:#e5e5ea;}
@@ -396,7 +415,8 @@ body.dark .conf-cancel{background:#2c2c2e;color:#ebebf5;}
 <div id="app" style="display:none">
   <div class="topbar">
     <button class="back-btn" id="back-btn" onclick="goBack()">‹</button>
-    <img class="logo-img" id="app-logo" src="logo1.png" alt="MyRise"> 
+   <img class="logo-img logo-light" src="logo1.png" alt="MyRise">
+<img class="logo-img logo-dark" src="logo2.png" alt="MyRise">
     <span class="topbar-title" id="topbar-title"></span>
     <div class="spacer"></div>
     <div class="topbar-right">
