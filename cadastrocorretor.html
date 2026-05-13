@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Cadastro de Corretor — MyRise</title>
+<title>CADASTRO CORRETOR - MYRISE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
@@ -24,6 +24,41 @@
   --success: #16a34a;
   --text:    #1A1A2E;
 }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--flame);
+    text-align: center;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+
+    .header-title {
+        font-size: 14px;
+        width: 100%;
+        order: 2;
+    }
+
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        order: 3;
+    }
+
+    .logo-wrap {
+        order: 1;
+    }
+  }
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
 html{ scroll-behavior:smooth; }
 body{
