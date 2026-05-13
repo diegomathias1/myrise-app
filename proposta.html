@@ -38,7 +38,41 @@
   --warning:  #d97706;
   --text-main: #1A1A2E;
 }
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
 
+.header-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--flame);
+    text-align: center;
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+
+    .header-title {
+        font-size: 14px;
+        width: 100%;
+        order: 2;
+    }
+
+    .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        order: 3;
+    }
+
+    .logo-wrap {
+        order: 1;
+    }
+}
 *{ box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
 html{ scroll-behavior:smooth; }
 body{
@@ -608,6 +642,7 @@ body{
     <div class="logo-wrap">
       <img src="logo1.png" alt="MyRise" class="logo-img" draggable="false">
     </div>
+     <div class="header-title">PROPOSTA DE COMPRA</div>
     <div class="header-right">
       <button class="btn-hdr btn-hdr-ghost" onclick="saveLocal()">💾 Salvar</button>
       <button class="btn-hdr btn-hdr-wa" onclick="compartilharWA()">📲 WhatsApp</button>
