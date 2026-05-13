@@ -766,12 +766,13 @@ body {
 .pdf-page-header { display:none; }
    .pdf-page-header { display:none; }
 
-/* ===== HEADER AJUSTE ===== */
+/* ==== HEADER AJUSTE ==== */
 .app-header{
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 200;
-  background: var(--black);
 }
 
 .header-inner{
@@ -781,38 +782,48 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 12px 20px;
+  padding: 10px 14px;
   flex-wrap: wrap;
 }
 
 .logo-img{
-  height: 38px;
+  height: 34px;
   width: auto;
   display: block;
 }
 
 .header-title{
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--flame);
   text-align: center;
-  flex: 1;
+  white-space: nowrap;
+}
+
+.header-right{
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 @media (max-width: 600px){
   .header-inner{
-    padding: 10px 8px;
-    gap: 6px;
+    max-width: 100%;
+    padding: 8px 8px;
+    gap: 5px;
+    flex-wrap: wrap;
   }
 
   .logo-img{
-    height: 28px;
+    height: 24px;
   }
 
   .header-title{
     width: 100%;
     order: 2;
-    font-size: 12px;
+    font-size: 10px;
+    text-align: center;
   }
 
   .header-right{
@@ -820,12 +831,12 @@ body {
     order: 3;
     display: flex;
     justify-content: space-between;
-    gap: 6px;
+    gap: 5px;
   }
 
   .btn-hdr{
-    padding: 6px 8px;
-    font-size: 10px;
+    padding: 5px 6px;
+    font-size: 9px;
   }
 }
 
