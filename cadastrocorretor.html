@@ -78,10 +78,12 @@ body{
   border-bottom:1px solid #222;
   position:sticky; top:0; z-index:200;
 }
-.header-inner{
+.header-inner {
   max-width:860px; margin:0 auto;
   display:flex; align-items:center; justify-content:space-between;
-  padding:10px 20px; gap:12px; flex-wrap:nowrap;
+  padding:12px 20px;
+  gap:10px;
+  flex-wrap:wrap;
 }
 .logo-wrap{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
 .logo-img{ height:32px; width:auto; object-fit:contain; display:block; background:none; border:none; }
@@ -408,8 +410,8 @@ body{
   <div class="header-inner">
     <div class="logo-wrap">
       <img src="logo2.png" alt="MyRise" class="logo-img" draggable="false">
-      <span class="header-badge">CADASTRO DE CORRETOR</span>
     </div>
+     <div class="header-title">CADASTRO DE CORRETOR</div>
     <div class="header-right">
       <button class="btn-hdr btn-hdr-ghost" onclick="saveLocal()">💾 Salvar</button>
       <button class="btn-hdr btn-hdr-wa" onclick="compartilharWA()">📲 WhatsApp</button>
